@@ -1,0 +1,15 @@
+	.site-content {
+		padding: 0;
+		background: #f1f1f1;
+
+		.pg-aligner {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  height: 100vh;// calc(100vh - 71px);
+		}
+
+		.aligner-item {
+		  // text-align: center;
+		}
+}
