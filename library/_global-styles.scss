@@ -1,6 +1,6 @@
 	.site-content {
 		padding: 0;
-		background: #f1f1f1;
+		background: transparent;
 
 		.pg-aligner {
 		  display: flex;
@@ -13,3 +13,126 @@
 		  // text-align: center;
 		}
 }
+
+
+.home {
+	color: #fff;
+}
+
+
+
+h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	line-height: 1;
+}
+
+h2 {
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	// font-family: $font-family-serif;
+}
+
+// h1 {
+// 	font-family: "clarendon-text-pro",sans-serif;
+// 	// font-family: 'Gotham SSm A', 'Gotham SSm B';
+// 	// font-weight: 700;
+// }
+
+
+.home {
+	background: #333;
+}
+
+
+
+
+
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+// THE TIMING FOR THE CONTENT to come in
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	animation:fadeIn ease-in 1;
+	animation-fill-mode:forwards;
+	animation-duration: 1.5s;
+}
+
+.fade-in.pg-overlay {
+// animation-delay: 1.7s;
+}
+
+.fade-in.two {
+animation-delay: 1.2s;
+}
+
+.fade-in.three {
+animation-delay: 1.6s;
+}
+
+/*---make a basic box ---*/
+
+
+// THE TIMING FOR THE BG TO DARKEN
+
+// @keyframes fade-ish { from { opacity:0; } to { opacity:0.4; } }
+
+// .fade-ish {
+// 	opacity:0;  /* make things invisible upon start */
+//   -webkit-animation-name: fade-ish;
+//   -webkit-animation-duration: 1.0s;
+//   -webkit-animation-timing-function: ease-in;
+//   -webkit-animation-iteration-count: 1;
+//   // -webkit-animation-delay: 2s;
+//   animation-fill-mode:forwards;
+// }
+
+
+@keyframes fadeout { from { opacity: 1; } to { opacity: .6; } }
+
+@keyframes fadeouter { from { opacity: 1; } to { opacity: .85; } }
+
+
+
+// THE BACKGROUNDS
+
+.home .backstretch {
+    animation: fadeout 2.5s;
+    opacity: .6;
+}
+
+
+
+// /*
+//  * CSS Animations
+//  * Don't forget to add vendor prefixes!
+//  */
+// .m-scene .scene_element {
+//   animation-duration: 0.25s;
+//   transition-timing-function: ease-in;
+//   animation-fill-mode: both;
+// }
+
+// .m-scene .scene_element--fadein {
+//   animation-name: fadeIn;
+// }
+
+// .m-scene.is-exiting .scene_element {
+//   animation-direction: alternate-reverse;
+// }
+
+// /*
+//  * Keyframes
+//  */
+// @keyframes fadeIn {
+//   0% { opacity: 0; }
+//   100% { opacity: 1; }
+// } 

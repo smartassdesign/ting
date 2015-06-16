@@ -11,15 +11,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/css\/style.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/style.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/assets\/js\/bootstrap.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1187,12 +1178,12 @@
 		},
 	"\/library\/js\/bootstrap.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/library\/js\/bootstrap.js",
-		"outputAbbreviatedPath": "\/library\/js\/min\/bootstrap-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/bootstrap-min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -1328,6 +1319,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/library\/js\/jquery.backstretch.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/js\/jquery.backstretch.min.js",
+		"outputAbbreviatedPath": "\/library\/js\/min\/jquery.backstretch.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/parts\/_variables.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -1417,6 +1419,14 @@
 	],
 "lastSavedByUser": "Jon Hecht",
 "manualImportLinks": {
+	"\/library\/js\/bootstrap.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/library\/js\/jquery.backstretch.min.js",
+			"position": 0,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
