@@ -10,12 +10,12 @@
 	<title><!-- $pageTitle --></title>
 
 	<link href="<!--$css-->-master.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6759554/743008/css/fonts.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6759554/743008/css/fonts.css" /> -->
 
 	<!-- SWITCH H&FJ TO PRODUCTION BEFORE LAUNCH -->
 
-	<script src="//use.typekit.net/bii7ems.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
+	<!--<script src="//use.typekit.net/bii7ems.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -36,4 +36,30 @@
 
   <body class="<!--$bodyClass-->">
 
-<main class="site-content" role="main">	
+
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Tim 'n Morgan</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li <!-- $gistNavClass -->><a href="gist.html">The Gist</a></li>
+                <li <!-- $festivitiesNavClass -->><a href="festivities.html">The Festivities</a></li>
+                <li <!-- $locationNavClass -->><a href="https://www.google.com/maps/place/waterloo+village/@40.915225,-74.756552,15z/data=!4m2!3m1!1s0x0:0x271b936df0160b93?sa=X&ved=0CI0BEPwSMA5qFQoTCIWk8_CrisYCFactjAodRCMAVw" target="_blank">The Location</a></li>
+                <li <!-- $lodgingNavClass -->><a href="../lodging.html">The Lodging</a></li>
+                <li <!-- $faqNavClass -->><a href="../faq.html">The FAQs</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+
+<main class="site-content" role="main">

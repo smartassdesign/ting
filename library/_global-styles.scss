@@ -1,12 +1,69 @@
+@mixin break-min($size) {
+    @media (min-width: $size) { @content; }
+}
+
+
+// NEW FROM ME...
+
+$break-xxs: 300px; 		// 480px
+$break-xs: $screen-xs; 		// 480px
+$break-sm: $screen-sm; 		// 768px
+$break-md: $screen-md; 		// 992px
+$break-lg: $screen-lg; 		// 1200px
+$break-xl: 1280px; 			// desktop
+$break-xxl: 1440px; 		// desktop
+
+
+@media (min-width: $screen-md-min) {
+
+header,
+footer {
+  flex: none; /* 2 */
+  z-index: 1;
+}
+
+
+.flexbox body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+  min-height: 100vh;
+	// padding: 0;
+}
+
+// .flexbox [role='main'] {
+// 	flex: 1 1 auto;
+// }
+
+// .viewport {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh; /* 1, 3 */
+// }
+
+.site-content {
+  // flex: 1; /* 2 */
+  flex:1 0 auto;
+  // padding:1.5em 1.5em 0;
+  padding: 0;
+  // padding: var(--space) var(--space) 0;
+  width: 100%;
+  position: relative;
+  // overflow-y: auto;
+}
+
+
+
+// GLOBAL THINGS
 	.site-content {
-		padding: 0;
+		// padding: 0;
 		background: transparent;
 
 		.pg-aligner {
 		  display: flex;
 		  align-items: center;
 		  justify-content: center;
-		  height: 100vh;// calc(100vh - 71px);
+		  height: calc(100vh - 151px); //100vh;
 		}
 
 		.aligner-item {
@@ -14,53 +71,66 @@
 		}
 }
 
+.c2 {
+	columns: 2;
+}
 
-.home {
-	color: #fff;
+}
+// END BIG RESPONSIVE FLEX THING
+
+.site-content {
+	padding: 160px 0 40px 0;
+		@media (min-width: $screen-md-min) {
+				padding: 0;
+
+		}
 }
 
 
 
-// h1 {
-// 	font-weight: 700;
-// 	text-transform: uppercase;
-// 	letter-spacing: 3px;
-// 	line-height: 1;
-// }
-
 h2 {
-	font-family: $font-family-sans-serif;
+	// font-family: $font-family-sans-serif;
 	font-weight: 700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	line-height: 1;	
-	margin-bottom: .75em;
-	&:first-child {
+	font-size: 40px;
+	line-height: 1;
+	margin-bottom: .25em;
+	margin-top: .5em;
+	&:last-child {
 		margin-bottom: 0;
+		margin-top: 0;
+		font-weight: 400;
+		font-family: "payson_wfregular", helvetica, arial, verdana, sans-serif;
+		font-weight: normal;
 	}
+}
 
-	&.light {
-		font-weight: 300;
-	}
+
+h4 {
+	font-family: "payson_wfbold", helvetica, arial, verdana, sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	margin-bottom: 3px;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+p, ul li {
+	font-weight: 600;
 	// font-family: $font-family-serif;
+	// font-size: 5em;
+	line-height: 1.2em;
+	// @extend .Austin-Extrabold-Web;
+
+	a {
+		text-decoration: underline;
+		color: #333;
+
+	}
 }
-
-// h1 {
-// 	font-family: "clarendon-text-pro",sans-serif;
-// 	// font-family: 'Gotham SSm A', 'Gotham SSm B';
-// 	// font-weight: 700;
-// }
-
-
-.home {
-	background: #333;
-}
-
-
-
-
-
-
 
 /* make keyframes that tell the start state and the end state of our object */
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -112,104 +182,202 @@ animation-delay: 1.6s;
 
 // THE BACKGROUNDS
 
+
+.home {
+	background: #333;
+}
+
 .home .backstretch {
     animation: fadeout 2.5s;
     opacity: .6;
 }
 
 
-
-// /*
-//  * CSS Animations
-//  * Don't forget to add vendor prefixes!
-//  */
-// .m-scene .scene_element {
-//   animation-duration: 0.25s;
-//   transition-timing-function: ease-in;
-//   animation-fill-mode: both;
-// }
-
-// .m-scene .scene_element--fadein {
-//   animation-name: fadeIn;
-// }
-
-// .m-scene.is-exiting .scene_element {
-//   animation-direction: alternate-reverse;
-// }
-
-// /*
-//  * Keyframes
-//  */
-// @keyframes fadeIn {
-//   0% { opacity: 0; }
-//   100% { opacity: 1; }
-// } 
-
-
-
-
-.modal-header {
-	// background: $brand-primary;
-	border-bottom: none;
-	background: #fff;
-	text-align: center;
-	padding: 20px 20px 0 20px;
+.faq, .festivities, .gist, .lodging {
+		background-image: url("/assets/img/paper.png");
 }
 
-.modal-title {
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 18px;
 
-}
+
+// HOME PAGE
 
 .home {
-	.btn + .btn {
-		margin-left: 20px;
+	color: #fff;
+
+	.navbar-default .navbar-brand {
+		display: none;
 	}
 
-	.modal-body {
-		color: #333;
-		padding: 20px; 
-		// background: $brand-primary;
+	.navbar-nav > li > a {
+		color: #fff;
+	}
+
+
+}
+
+
+// FAQ PAGE
+
+
+.faq {
+
+	p {
+		// @extend .Austin-Bold-Web;
+		font-size: 32px;
+		// line-height: 1.2em;
+		margin-bottom: 20px;
 
 		a {
-			font-weight: 600;
+			text-decoration: underline;
+			color: #333;
+			&:hover {
+				color: $brand-primary;
+			}
 		}
 
-		ul {
-			padding-left: 20px;
+		&.q {
+			font-family: "payson_wfbold", helvetica, arial, verdana, sans-serif;
+			font-weight: normal;
+			font-size: 15px;
+			margin-bottom: 3px;
+			font-style: normal;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
 
 
+// LODGING PAGE
 
-
-// VERTICAL MODAL TEST #3
-
-.vertical-alignment-helper {
-    display:table;
-    height: 100%;
-    width: 100%;
-    pointer-events:none;
+.lodging {
+	font-size: 22px;
 }
-.vertical-align-center {
-    /* To center vertically */
-    display: table-cell;
-    vertical-align: middle;
-    pointer-events:none;
+
+// GIST PAGE
+
+.gist p {
+	font-size: 1.5em;
+	@media (min-width: $screen-md-min) {
+		font-size: 2.25em;
+		line-height: 1.2em;
 }
-.modal-content {
-    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
-    width:inherit;
-    height:inherit;
-    /* To center horizontally */
-    margin: 0 auto;
-    pointer-events:all;
-    border: 15px solid $brand-primary;
-    border-radius: 0;
+	@extend .Austin-Extrabold-Web;
 }
 
 
+// NAV
+
+#navbar {
+		background-color: #fff;
+		@media (min-width: $screen-md-min) {
+    	background-color: transparent;
+	}
+}
+
+.navbar-nav {
+	margin: 0;
+	@media (min-width: $screen-md-min) {
+		margin: 27.5px -15px;
+}
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-nav > li > a {
+	// font-family: "payson_wfregular", helvetica, arial, verdana, sans-serif;
+	font-family: "payson_wfbold", helvetica, arial, verdana, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+	// letter-spacing: 1px;
+	// text-transform: uppercase;
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: $brand-primary;
+}
+
+
+
+// .navbar-default .navbar-collapse.in, .navbar-default .navbar-collapse.navbar-collapsing.in {
+// 	background: red;
+// }
+
+
+// .collapsing ul li a, .in ul li a {color: #fff; background: $brand-primary;}
+// .collapsing ul li a:hover, .in ul li a:hover {color: #303030; background: $brand-primary;}
+
+// .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+// 	background: $brand-primary;
+// }
+
+.navbar-default .navbar-brand {
+	text-indent: -9999px;
+	background: url("../img/t-m-600-header-red.png") no-repeat center center;
+	background-size: contain;
+	width: 200px;
+	height: 114px;
+	padding: 82px 15px;
+}
+
+
+
+
+
+
+// RESPONSIVE STYLES
+
+
+.home {
+
+@media (min-width: $screen-md-min) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+		.navbar-nav > li > a {
+			font-size: 24px;
+			&:hover {
+				text-decoration: underline;
+				color: #fff;
+			}
+		}
+}
+
+}
+
+
+@media (min-width: $screen-md-min) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: right;
+    }
+}
+
+
+::selection { color: #fff;
+	background-color: $brand-primary;
+}
+::-moz-selection { color: #fff;
+	background-color: $brand-primary;
+}
